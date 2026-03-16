@@ -109,3 +109,45 @@ fn main(){
     println!("The area is {:?}" , rec.area().clone()) ;
 }
 _____________________________________________________
+struct Rec{
+    len : i32 ,
+    wid : i32 , 
+}
+impl  Rec{
+    fn width(&self)-> bool{
+        if self.wid <= 0{
+            return false ;
+        }else{
+            return true ;
+        }
+    }
+    fn area(&self)-> i32 {
+       return  self.len * self.wid ;
+    }
+    fn can_hold(&self , other : &Rec)-> bool{
+        if self.len > other.len && self.wid > other.wid{
+            return true ;
+        }else{
+            return false ;
+        }
+    }
+}
+
+fn main(){
+    let rec1 : Rec = Rec{
+        len : 30 ,
+        wid : 10 ,
+    } ;
+    let rec2 : Rec = Rec{
+        len : 12 ,
+        wid : 8 ,
+    } ;
+    let rec3 : Rec = Rec{
+        len : 21 ,
+        wid : 2 ,
+    } ;
+    rec1.width() ;
+    println!("The area of rec 1  {:?}" , rec1.area()) ;
+    println!("Is rec 1 can hold rec 2 {:?}" , rec1.can_hold(&rec2)) ;
+    println!("Is rec 1 can hold rec 3 {:?}" , rec1.can_hold(&rec3)) ;
+}
