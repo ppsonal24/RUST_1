@@ -81,3 +81,31 @@ fn main(){
 }
 try to learn the usage of dbg!() 
 ______________________________________________________________________
+#[derive(Debug , Clone)]
+struct Rec{
+    len : i32 ,
+    wid : i32 ,
+}
+impl Rec{
+    fn _wid(&self)-> bool{
+        if self.wid <= 0{
+            return false ;
+        }else{
+            return true ;
+        }
+    }
+}
+impl Rec{
+    fn area(&self)-> i32{
+        return self.len * self.wid ;
+    }
+}
+fn main(){
+    let rec : Rec = Rec{
+        len : 32 ,
+        wid : 2 ,
+    } ;
+    dbg!(("Info of rec is {:?}" , rec.clone())) ;
+    println!("The area is {:?}" , rec.area().clone()) ;
+}
+_____________________________________________________
