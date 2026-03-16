@@ -45,3 +45,18 @@ fn main(){
     println!("The area is {:?}" , result) ;
 }
 ____________________________________________________________________________________
+#[derive(Debug)]
+struct Num{
+    num1 : i32 ,
+    num2 : i32 ,
+}
+fn main(){
+    let num : Num = Num{
+        num1 : 12 ,
+        num2 : 32 ,
+    } ;
+    dbg!(("Num is {:?}" , num)) ;
+}
+using dbg like touple (()) 
+dbg!("Num is {:?}" , num)    ---> is worng way ;
+dbg!(("Num is {:?}" , num)) ----> correct way ; 
