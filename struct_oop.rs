@@ -151,3 +151,24 @@ fn main(){
     println!("Is rec 1 can hold rec 2 {:?}" , rec1.can_hold(&rec2)) ;
     println!("Is rec 1 can hold rec 3 {:?}" , rec1.can_hold(&rec3)) ;
 }
+___________________________________________________________________________
+struct Rec{
+    len : i32 ,
+    wid : i32 ,
+}
+impl Rec{
+    fn area(&self)-> i32{
+        return self.len * self.wid ;
+    }
+    fn new(len : i32  , wid: i32)-> Self{
+        Self {
+            len ,
+            wid 
+        }
+    }
+}
+fn main(){
+    let ins : Rec = Rec::new(22 ,3) ;
+    dbg!(("The area is {:?}" , ins.area())) ;
+}
+_________________________________________________________________________
