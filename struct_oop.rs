@@ -29,3 +29,19 @@ fn main(){
     println!("Person2 is {:?}" , per2) ;
 }
 _________________________________________
+struct Info{
+    len : i32 ,
+    wid : i32 ,
+}
+fn calculate_area(len : i32 , wid : i32)-> i32{
+    return len * wid ;
+}
+fn main(){
+    let info : Info = Info{
+        len : 120 ,
+        wid : 32 ,
+    } ;
+    let result : i32 = calculate_area(info.len , info.wid) ;
+    println!("The area is {:?}" , result) ;
+}
+____________________________________________________________________________________
