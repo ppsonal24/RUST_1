@@ -60,3 +60,24 @@ fn main(){
 using dbg like touple (()) 
 dbg!("Num is {:?}" , num)    ---> is worng way ;
 dbg!(("Num is {:?}" , num)) ----> correct way ; 
+_____________________________________________________________________
+struct Rectangle{
+    len : i32 ,
+    wed : i32 ,
+}
+impl Rectangle{
+    fn area(&self)-> i32{
+        let rect = dbg!(self.len * self.wed) ;
+        return rect ;
+    }
+}
+fn main(){
+    let info : Rectangle = Rectangle{
+        len : 2 ,
+        wed : 43 ,
+    } ;
+    println!("Info is {:?}" , info) ;
+    dbg!(("The area is {:?}" , info.area())) ;
+}
+try to learn the usage of dbg!() 
+______________________________________________________________________
